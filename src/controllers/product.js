@@ -51,7 +51,7 @@ module.exports = {
         name_product,
         desc_product,
         price_product,
-        image: `http://localhost:3001/uploads/${req.file.filename}`,
+        image: `${process.env.URL}/uploads/${req.file.filename}`,
         id_user: decoded.id,
         id_category
       };
@@ -88,13 +88,13 @@ module.exports = {
           name_product,
           desc_product,
           price_product,
-          image: `http://localhost:3001/uploads/${req.file.filename}`,
+          image: `${process.env.URL}/uploads/${req.file.filename}`,
           id_user: decoded.id,
           id_category
         }
         // remove file{
         const fs = require('fs');
-        const path = image_delete.replace('http://localhost:3001', '.');
+        const path = image_delete.replace(`${process.env.URL}`, '.');
         fs.unlink(path, (err) => {
           if (err) {
             console.error(err)

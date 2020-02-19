@@ -109,7 +109,7 @@ module.exports = {
             resolve(result);
             // remove file{
             const fs = require('fs');
-            const path = image_delete.replace('http://localhost:3001', '.');
+            const path = image_delete.replace(`${process.env.URL}`, '.');
             fs.unlink(path, (err) => {
               if (err) {
                 console.error(err)

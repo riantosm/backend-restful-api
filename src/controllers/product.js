@@ -43,8 +43,10 @@ module.exports = {
         desc_product,
         price_product,
         image: imagee,
+	stock_product: 0,
         id_user: decoded.id,
-        id_category
+        id_category,
+	deleted: 0,
       };
     }else{
       data = {
@@ -52,8 +54,10 @@ module.exports = {
         desc_product,
         price_product,
         image: `${process.env.URL}/uploads/${req.file.filename}`,
+	stock_product: 0,
         id_user: decoded.id,
-        id_category
+        id_category,
+	deleted: 0,
       };
     }
     productModel.insertProduct(data)
@@ -79,8 +83,10 @@ module.exports = {
           desc_product,
           price_product,
           image: result[0].image,
+	  stock_product: result[0].stock_product,
           id_user: decoded.id,
-          id_category
+          id_category,
+	  deleted: 0,
         }
       }else{
         image_delete = result[0].image;
@@ -89,8 +95,10 @@ module.exports = {
           desc_product,
           price_product,
           image: `${process.env.URL}/uploads/${req.file.filename}`,
+	  stock_product: result[0].stock_product,
           id_user: decoded.id,
-          id_category
+          id_category,
+	  deleted: 0,
         }
         // remove file{
         const fs = require('fs');

@@ -13,7 +13,7 @@ const Router = express.Router();
 Router.use("/product", auth.verify, product);
 Router.use("/category", auth.verify, category);
 Router.use("/cart", auth.verify, cart);
-Router.use("/user", auth.verify_admin, user);
+Router.use("/user", auth.verify, user);
 Router.use("/history", history);
 Router.use("/login", login);
 Router.use("/logout", logout);

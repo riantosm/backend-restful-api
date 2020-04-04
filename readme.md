@@ -1,22 +1,31 @@
-# Point of sales
+# Point of sales (Backend)
+POS-RESTfulAPI is a Point of Sale systems with restful api. The main features are:
+- Login and Register with JWT.
+- CURD Products, Categories and Users.
+- Add/Reduce products order.
+- File Image Upload on product.
+- Search product by name.
+- Sort product by name, category, date updated.
+- Products page pagination.
+- Allowed CORS.
+- Reporting on income today, yearly, and orders weekly.
 
-Foobar is a Python library for dealing with word pluralization.
-
-## Link
 
 Use the package manager `http://localhost:3000/api/v1`
 
-## How to use
-1. Login
-2. Add category product
-3. Add product
-4. Add stock product
-5. Add cart
-6. Add cart detail
-7. Pay the cart
-8. View history income
+## .env
+`SERVER_PORT = 3001
+DB_HOST = "localhost"
+DB_USER = "root"
+DB_PASS = ""
+DB_NAME = "arkademy_latihan_3"
+PRIVATE_KEY = "coba-coba"
+TOKENS = ""
+TOKENS_ADMIN = ""
+USER_ID = ""`
 
 ### Login
+
 If you don't have an account, tell the admin to register an account.
 
 - `http://localhost:3000/api/v1/login`
@@ -54,7 +63,7 @@ If you are logged in, you can access
 - `http://localhost:3000/api/v1/cart`
 - `http://localhost:3000/api/v1/history`
 
-## Documentation
+## List of Endpoint
 - CRUD Category (`http://localhost:3000/api/v1/category`)
 
   For CRUD category, use :

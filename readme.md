@@ -13,18 +13,28 @@ POS-RESTfulAPI is a Point of Sale systems with restful api. The main features ar
 
 Use the package manager `http://localhost:3000/api/v1`
 
-## .env
-`SERVER_PORT = 3001
-DB_HOST = "localhost"
-DB_USER = "root"
-DB_PASS = ""
-DB_NAME = "arkademy_latihan_3"
-PRIVATE_KEY = "coba-coba"
-TOKENS = ""
-TOKENS_ADMIN = ""
-USER_ID = ""`
+## .How to Install
+1. Clone this repository 
+    `
+    $ git clone https://github.com/riantosm/backend-restful-api.git
+    `.
+2. Create a database and import arkademy_latihan_3.sql to database.
+3. Install all depedencies on the package.json `$ npm install`.
+4. Create `.env` file with environment variable in line with following:
 
-### Login
+    ```SERVER_PORT = 3001
+    DB_HOST = "localhost"
+    DB_USER = "root"
+    DB_PASS = ""
+    DB_NAME = "arkademy_latihan_3"
+    PRIVATE_KEY = "coba-coba"
+    TOKENS = ""
+    TOKENS_ADMIN = ""
+    USER_ID = ""
+    ```
+5. Run `$ npm start`.
+
+## Login
 
 If you don't have an account, tell the admin to register an account.
 
